@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
+    </head>
+<body>
+
+    <h1>Video Player</h1>
+
+  <input type="file" id="video" name="video.mp4" onchange="loadFile(event)" style="display: none;">
+  <p id="submit"><label id="label" for="video" style="cursor: pointer;" onclick="showVideo();">Upload Video</label></p>
+  <p id="box"><video style="display:none;" id="output" width="1300" height="470" controls></video></p>
+  <p id="git" style="display:none;">Check out my github: <u style="color: rgb(8, 40, 158);">Samriddha2007</u></p>
+
+
+<script>
+var loadFile = function(event) {
+	var video = document.getElementById('output');
+	video.src = URL.createObjectURL(event.target.files[0]);
+};
+function showVideo(){
+    document.getElementById("output").style.display = "block"
+    document.getElementById("git").style.display = "block"
+}
+</script>
+</body>
+</html>
